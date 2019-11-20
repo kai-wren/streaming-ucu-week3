@@ -6,8 +6,17 @@ trait Task[A] {
   def join: A // blocks and returns when ready
 }
 object Task {
-
-  def apply[T](e: => T): Task[T] = ???
+  val pool = new ForkJoinPool(4)
+  def apply[T](e: => T): Task[T] = {
+    val task = new RecursiveTask[T] {
+      override def compute(): T = e
+    }
+    pool.execute(task)
+    task.fork()
+    new Task[T] {
+      override def join: T = task.join()
+    }
+  }
 }
 
 object Test extends App {

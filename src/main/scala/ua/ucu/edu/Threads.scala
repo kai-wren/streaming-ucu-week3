@@ -46,7 +46,6 @@ object ForkJoin extends App {
       }
     }
   }
-
   val l = new ForkJoinPool().submit(new FibonacciComputation(10))
   println(l.get())
 }
