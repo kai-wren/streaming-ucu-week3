@@ -12,4 +12,3 @@ employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,comm
 200,John,Snow,JDOE,515.125.0001,18-JUL-1988,AD_OWNER,35000,NULL,NULL,90
 114,Robert,Baratheon,RBARATHEON,515.125.0002,23-SEP-1995,IT_MAN,15000,NULL,NULL,60
 121,Teon,Greyjoy,TGREYJOY,515.125.0003,16-AUG-1994,FI_DIR,14000,NULL,NULL,100
-
