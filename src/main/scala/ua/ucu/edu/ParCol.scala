@@ -114,5 +114,4 @@ object CustomCharCount extends App {
   val parStr:ParString = new ParString(testStr)
 //  println(parStr.map(_ == '!'))
 //  println(parStr.max)
-  println(parStr.getClass)
 }
